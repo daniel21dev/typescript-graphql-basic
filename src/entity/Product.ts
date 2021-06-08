@@ -4,9 +4,10 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
 } from "typeorm";
+import { BaseEntity } from "typeorm";
 
 @Entity()
-export class Product {
+export class Product extends BaseEntity {
   @PrimaryGeneratedColumn()
   id!: number;
 
