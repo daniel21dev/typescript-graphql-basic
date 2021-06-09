@@ -4,9 +4,9 @@ import { connect } from "./config/typeorm";
 
 async function main() {
   const app = await startServer();
-  app.listen(4000);
+  app.listen(3000);
   connect();
-  console.log("server on port", 4000);
+  console.log("server on port", 4001);
 }
 
 main();

@@ -8,8 +8,12 @@ export class ProductResolver {
     @Arg("name") name: string,
     @Arg("quantity") quantity: number
   ) {
-    const product = new Product();
     await Product.insert({ name, quantity });
     return true;
+  }
+
+  @Query(() => [Product])
+  products() {
+    return Product.find();
   }
 }
